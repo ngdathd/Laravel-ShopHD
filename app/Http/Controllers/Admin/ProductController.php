@@ -67,7 +67,7 @@ class ProductController extends Controller
 
         $p = new Product();
         $p->name = $request->name;
-        $p->categories_id = $request->categories_id;
+        $p->category_id = $request->category_id;
         $p->price = $request->price;
         $p->thumbnail = $thumbnail;
         $p->save();
@@ -125,7 +125,7 @@ class ProductController extends Controller
         }
 
         $p->name = $request->name;
-        $p->categories_id = $request->categories_id;
+        $p->category_id = $request->category_id;
         $p->price = $request->price;
         $p->thumbnail = $thumbnail;
         $p->save();

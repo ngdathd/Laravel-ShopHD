@@ -17,10 +17,10 @@ class CreateOrdersTable extends Migration
             $table->increments('id');
             $table->dateTime('order_date');
             $table->dateTime('required_date');
-            $table->string('address', 45);
-            $table->integer('users_id');
-            $table->integer('order_details_id');
-            $table->string('transportation', 45);
+            $table->string('address', 45)->default('');
+            $table->integer('user_id')->default(0);
+            $table->integer('order_detail_id')->default(0);
+            $table->string('transportation', 45)->default('');
             $table->timestamps();
         });
     }

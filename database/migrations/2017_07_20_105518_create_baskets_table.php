@@ -15,8 +15,8 @@ class CreateBasketsTable extends Migration
     {
         Schema::create('baskets', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('products_id');
-            $table->integer('counts');
+            $table->integer('product_id')->default(0);
+            $table->integer('counts')->default(0);
             $table->timestamps();
         });
     }

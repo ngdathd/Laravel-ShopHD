@@ -18,14 +18,14 @@ class CreateProductsTable extends Migration
             $table->string('name', 45)->default('');
             $table->string('thumbnail')->default('');
             $table->float('price', 11, 2)->default(0);
-            $table->string('screen_size', 255)->default('');
+            $table->string('screen_size')->default('');
             $table->float('discount', 3, 0)->default(0);
-            $table->string('description', 45)->default('');
-            $table->string('content', 45)->default('');
-            $table->string('status', 45)->default('');
+            $table->string('description')->default('');
+            $table->string('content')->default('');
+            $table->string('status')->default('');
             $table->integer('order_detail_id')->default(0);
-            $table->integer('categories_id')->default(0);
-            $table->integer('baskets_id')->default(0);
+            $table->integer('category_id')->default(0);
+            $table->integer('basket_id')->default(0);
             $table->timestamps();
         });
     }
